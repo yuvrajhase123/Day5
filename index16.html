@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let balance=100;
+        let ac_no=193635;
+        let name,option;
+        name=prompt("enter your name");
+        alert("1.check balance \n2.deposit\n3.withdraw money\n 4.exit");
+        do{
+            option=Number(prompt("enter the option"));
+            switch(option){
+                case 1:
+                    alert("balance for "+name+" is : "+balance);
+                    break;
+                case 2:
+                    let amount=Number(prompt("enter the money to be deposited in ac no. "+ac_no));
+                    balance+=amount;
+                    alert("now current  balance is :"+balance);
+                    break;
+                case 3:
+                    let money=Number(prompt("enter the money to be withdrawn in ac no. "+ac_no));
+                    if(balance>=money){
+                        
+                        balance-=money;
+                        alert("now current  balance is :"+balance);
+                        break;
+                    }
+                    else{
+                        alert("not enough balance");
+                        break;
+                    }
+                case 4:
+                    alert("bye")
+                default:
+                    alert("invalid input");
+            }
+
+        }while(option!==4);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
